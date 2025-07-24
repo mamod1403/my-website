@@ -1,81 +1,50 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="ดันท่อลอด, Pipe Jacking, HDD, งานเจาะใต้ดิน, งานท่อ, เจาะถนน, งานวิศวกรรมใต้ดิน, SAENDEE DRILL, แสนดี, แสนดี ดริล">
   <title>SAENDEE DRILL AND ENGINEERING</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    html,
-    body {
+    html, body {
       margin: 0;
       padding: 0;
     }
-
-    body,
-    header,
-    main {
+    body, header, main {
       margin-top: 0 !important;
     }
-
-    .parallax-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 300vh;
-      /* enough height for 3 full screens */
-      z-index: -3;
-    }
-
-    .parallax-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
+    body {
+      background-image: url('/mnt/data/sande_4.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      opacity: 0.3;
-    }
-
-    .parallax-image:nth-child(2) {
-      top: 100vh;
-      background-image: url(sande_8.png);
-    }
-
-    .parallax-image:nth-child(3) {
-      top: 200vh;
-      background-image: url(sande_4.png);
-    }
-
-    .parallax-image:nth-child(1) {
-      background-image: url(sande_6.png);
-    }
-
-    @keyframes bgMove {
-      0% {
-        background-position: center 0;
-      }
-
-      100% {
-        background-position: center 1000px;
-      }
-    }
-
-    body {
+      animation: bgFade 30s infinite;
       font-family: sans-serif;
       text-align: center;
       position: relative;
       z-index: 0;
     }
-
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    @keyframes bgFade {
+      0% { background-image: url('/mnt/data/sande_4.png'); }
+      33% { background-image: url('/mnt/data/sande_6.png'); }
+      66% { background-image: url('/mnt/data/sande_8.png'); }
+      100% { background-image: url('/mnt/data/sande_4.png'); }
+    }
     h1 {
       color: #e67e22;
     }
-
     button {
       padding: 10px 20px;
       font-size: 16px;
@@ -85,31 +54,32 @@
       border-radius: 8px;
       cursor: pointer;
     }
-
     button:hover {
       background-color: #d35400;
     }
-
     .section-title {
       font-weight: bold;
       font-size: 1.5rem;
       margin-top: 2rem;
     }
-
     .highlight {
       color: #ff6600;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
-
     .bg-light-blue {
       background-color: #f1f8ff;
+      font-size: 1.2rem;
     }
-
+    .bg-light-blue p {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
     hr {
       border-top: 2px solid #ccc;
       margin: 2rem auto;
       width: 80%;
     }
-
     .image-grid {
       display: grid;
       grid-template-columns: 1fr 2px 1fr;
@@ -118,7 +88,6 @@
       align-items: center;
       justify-content: center;
     }
-
     .image-grid img {
       width: 100%;
       max-width: 300px;
@@ -128,12 +97,10 @@
       opacity: 0.85;
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
-
     .image-grid img:hover {
       transform: scale(1.05);
       opacity: 1;
     }
-
     .image-grid .divider {
       grid-row: 1 / span 2;
       background-color: black;
@@ -142,18 +109,10 @@
     }
   </style>
 </head>
-
 <body>
-  <div class="parallax-bg">
-    <div class="parallax-image"></div>
-    <div class="parallax-image"></div>
-    <div class="parallax-image"></div>
-  </div>
-
   <header class="bg-dark text-white text-center py-3">
     <h1>SAENDEE DRILL AND ENGINEERING</h1>
-    <p><span style="font-size: 1.5rem; font-weight: bold;">เจาะอย่างเชี่ยวชาญต้อง <span
-          class="highlight">“SAENDEE”</span></span></p>
+    <p><span style="font-size: 1.5rem; font-weight: bold;">เจาะอย่างเชี่ยวชาญต้อง <span class="highlight">“SAENDEE”</span></span></p>
   </header>
 
   <main class="container my-4">
@@ -161,22 +120,22 @@
     <!-- ภาพ/วิดีโอ + ประวัติ -->
     <div class="row align-items-center">
       <div class="col-md-6">
-        <img src="S.D.E.png" alt="SAENDEE Logo" class="img-fluid rounded shadow">
+        <img src="/mnt/data/S.D.E.png" alt="SAENDEE Logo" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-6">
         <div class="image-grid">
           <div style="grid-column: 1; grid-row: 1;">
-            <img src="sande_1.png" alt="รูป 1">
+            <img src="/mnt/data/3bc1397e-6f2e-458b-baa2-fff9a5b4c4fe.png" alt="รูป 1">
           </div>
           <div class="divider"></div>
           <div style="grid-column: 3; grid-row: 1;">
-            <img src="sande_2.png" alt="รูป 2">
+            <img src="/mnt/data/ac7190e5-d4b4-4ac8-a610-37ddc53693ea.png" alt="รูป 2">
           </div>
           <div style="grid-column: 1; grid-row: 2;">
-            <img src="sande_5.png" alt="รูป 3">
+            <img src="/mnt/data/4558a6c5-60de-42a1-9461-2da169ad9400.png" alt="รูป 3">
           </div>
           <div style="grid-column: 3; grid-row: 2;">
-            <img src="sande_8.png" alt="รูป 4">
+            <img src="/mnt/data/DzMGwmeBQVsyupncBuYDfT" alt="รูป 4">
           </div>
         </div>
       </div>
@@ -185,70 +144,66 @@
     <hr>
 
     <!-- บริการ -->
-    <div class="my-4">
+    <div class="bg-light-blue py-4">
       <h2 class="section-title text-center">บริการ</h2>
-      <p style="font-size: 1.5rem; font-weight: bold;" class="highlight">Service</p>
-      <p>หล่อบ่อไฟฟ้าโทรศัพท์ (22kv) (115kv)</p>
-      <p>ก่อสร้างร้อยสายใต้ดิน</p>
-      <p>ดันท่อลอด ไฟฟ้าสื่อสาร ประปา แสงสว่าง ไฟแดง</p>
+      <span class="highlight">Service</span>
+      <p>งานดันลอด (Pipe Jacking)</p>
+      <p>งานเจาะนำทาง (HDD - Horizontal Directional Drilling)</p>
+      <p>สำรวจด้วยกล้อง CCTV / รับ / ท่อ</p>
+      <p>งานสำรวจและทดสอบดิน (Site Survey)</p>
     </div>
+
     <hr>
 
     <!-- ผลงานที่ผ่านมา -->
     <div class="my-4">
       <h2 class="section-title">ผลงานที่ผ่านมา</h2>
-      <p style="font-size: 1.5rem; font-weight: bold;" class="highlight">Performance</p>
-      <p>โครงการที่สำเร็จ (ตัวอย่างงาน)</p>
-      <p>บ่อพัก (อยู่ในระหว่างการทำงาน)</p>
-
-      <!-- รูป Before / After -->
-      <div class="row justify-content-center mt-4">
-        <div class="col-md-5 text-center">
-          <p><strong>Before</strong></p>
-          <img src="sande_9.png" alt="Before" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-5 text-center">
-          <p><strong>After</strong></p>
-          <img src="sande_8.png" alt="After" class="img-fluid rounded shadow">
-        </div>
-      </div>
-
-      <div class="my-4">
-        <p>ดันท่อลอดถนน</p>
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-5 text-center">
-            <p><strong>Before</strong></p>
-            <img src="sande_10.png" alt="Before" class="img-fluid rounded shadow">
-          </div>
-          <div class="col-md-5 text-center">
-            <p><strong>After</strong></p>
-            <img src="sande_11.png" alt="After" class="img-fluid rounded shadow">
-          </div>
-        </div>
-      </div>
+      <p>โครงการที่สำเร็จ</p>
+      <p>ชื่อโครงการ, บริษัท, ภาพก่อน-หลัง</p>
+      <p>ลูกค้าหลัก เช่น ราชการ, ทหาร, เอกชน ฯลฯ</p>
+      <p><strong>คำค้นยอดนิยม:</strong> ดันท่อลอด, HDD, pipe jacking, เจาะถนน</p>
     </div>
+
     <hr>
 
-    <!-- หน่วยงานที่ทำงานด้วย -->
-    <div class="my-4">
-      <h2 class="section-title">หน่วยงานที่ทำงานด้วย</h2>
-      <p style="font-size: 1.5rem; font-weight: bold;" class="highlight">Contracting agency</p>
-      <p> ☑️ โครงการเมืองใหญ่เชียงใหม่</p>
-      <p> ☑️ โครงการการไฟฟ้าส่วนภูมิภาค</p>
-      <p> ฯลฯ</p>
+    <!-- บทความ/ความรู้ -->
+    <div class="bg-light py-4">
+      <h2 class="section-title">ข่าวสาร / ความรู้</h2>
+      <p>อธิบายระบบการทำงาน Pipe Jacking หรือ HDD คืออะไร</p>
+      <p>บทความให้ความรู้ เช่น “ท่อลอดวิธีไหนดี”</p>
     </div>
+
+    <hr>
+
+    <!-- รีวิวลูกค้า -->
+    <div class="my-4">
+      <h2 class="section-title">รีวิวจากลูกค้า / พันธมิตร</h2>
+      <p>ข้อความรับรู้คุณค่า</p>
+      <p>โลโก้บริษัท/หน่วยงานที่เคยทำงานร่วมกัน</p>
+    </div>
+
     <hr>
 
     <!-- ติดต่อเรา -->
-    <div class="my-4">
+    <div class="bg-light-blue py-4">
       <h2 class="section-title">ติดต่อเรา</h2>
-      <p style="font-size: 1.5rem; font-weight: bold;" class="highlight">Contact</p>
-      <p>E-maiL : pradabmoin2526@gmail.com</p>
-      <p>Mobile : 098-9488528</p>
-      <p>Address : 132/20 ม.5 ต.บ้านเกาะ อ.เมือง จ. อุตรดิตถ์ 53000</p>
-      <p>Website : www.saendee-dril.com</p>
+      <p>แผนที่ (Google Map ฝังไว้)</p>
+      <p>เบอร์ติดต่อ อีเมล</p>
+      <p>แบบฟอร์มติดต่อ (ชื่อ, เบอร์, อีเมล, ข้อความ)</p>
     </div>
+
     <hr>
+
+    <!-- ดาวน์โหลด -->
+    <div class="my-4">
+      <h2 class="section-title">ดาวน์โหลด</h2>
+      <p>แคตตาล็อก</p>
+      <p>ใบเสนอราคา</p>
+      <p>ข้อมูลเทคนิคเครื่องจักร</p>
+      <h1>สวัสดี! ยินดีต้อนรับสู่เว็บของฉัน</h1>
+      <p>นี่คือเว็บไซต์แรกที่เขียนด้วยมือของฉันเอง</p>
+      <button onclick="alert('ขอบคุณที่คลิก!')">คลิกฉัน</button>
+    </div>
 
   </main>
 
@@ -258,5 +213,4 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
